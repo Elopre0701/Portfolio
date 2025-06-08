@@ -164,25 +164,34 @@
 
        <!-- -------------- PROJECT BOX ---------------- -->
 
-    <section class="section" id="projects">
+   <section class="section" id="projects">
         <div class="top-header">
             <h1>Projects</h1>
         </div>
         <div class="project-container">
             <div class="project-box">
-                <img src="images/ALUMNI.png" alt="Alumni Tracking System" class="project-img">
+                <video class="project-img" autoplay muted loop playsinline>
+                    <source src="images/Alumni.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 <h4>Alumni Tracking System</h4>
                 <p><strong>Tech Stack:</strong> PHP, MySQL, Bootstrap, JavaScript</p>
             </div>
 
             <div class="project-box">
-                <img src="images/Student.png" alt="Student Management System" class="project-img">
+                 <video class="project-img" autoplay muted loop playsinline>
+                    <source src="images/student.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 <h4>Student Management System</h4>
                 <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
             </div>
 
             <div class="project-box">
-                <img src="images/Eagle.png" alt="Eagle Path" class="project-img">
+                <video class="project-img" autoplay muted loop playsinline>
+                    <source src="images/eagle.mov" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 <h4>Eagle Path</h4>
                 <p><strong>Tech Stack:</strong> Python, Pygame</p>
             </div>
@@ -195,6 +204,7 @@
         </div>
 
     </section>
+
 
 
 
@@ -395,11 +405,21 @@
       }
 
       // Show success alert
-        Swal.fire({
-        icon: 'success',
-        title: 'Message Sent!',
-        text: 'Thanks for reaching out. I’ll get back to you soon!',
-        confirmButtonText: 'Awesome 👌'
+        const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+        }
+        });
+
+        Toast.fire({
+        icon: "success",
+        title: "Message Sent! Thanks for reaching out!"
         });
 
       // Clear inputs
