@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Display</title>
+    <style>
+        .project-container {
+            display: none; /* Initially hide the project container */
+        }
+    </style>
+</head>
+<body>
+    <div class="project-box">
+        <i class="uil uil-briefcase-alt"></i>
+        <h3>Completed</h3>
+        <label>5+ Finished Projects</label>
+        <button onclick="showProjectContainer()">View Project</button>
+    </div>
+
+    <div class="project-container" id="project-container">
+        <a href="http://jhon-elopre-cs3f.onlinewebshop.net/index.php" class="project-box">
+            <iframe src="http://jhon-elopre-cs3f.onlinewebshop.net/index.php" frameborder="0" style="width:100%; height:300px;"></iframe>
+            <i class="uil uil-briefcase-alt"></i>
+        </a>
+    </div>
+
+    <script>
+        function showProjectContainer() {
+            document.getElementById('project-container').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
