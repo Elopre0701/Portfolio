@@ -1,7 +1,7 @@
 // Function to handle CV download
 function downloadCv() {
     // Specify the path to the CV file
-    const cvUrl = 'ElopreJhonResume.pdf';
+    const cvUrl = 'Elopre.pdf';
 
     // Create a temporary link element
     const link = document.createElement('a');
